@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Counter : MonoBehaviour
@@ -23,3 +24,4 @@ public class Counter : MonoBehaviour
         // Rund auf int für "Counter"-Feeling
         counterText.text = Mathf.FloorToInt(distanceFallen).ToString();
     }
+}
