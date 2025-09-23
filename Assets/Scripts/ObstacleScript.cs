@@ -8,6 +8,11 @@ public class ObstacleScript : MonoBehaviour
     public float StasisDuration = 2f;
 
     // Methods
+    enum Obstacles
+    {
+        StasisField,
+        ImpulseField
+    }
 
     void OnTriggerEnter(Collider other)
     {
