@@ -1,30 +1,27 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("GameScene(einfügen)");
+        SceneManager.LoadScene("");
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+        Debug.LogWarning("Paused Game");
     }
 
     public void CountinueGame()
     {
         Time.timeScale = 1f;
-        Debug.Log("Countinue Game");
+        Debug.LogWarning("Countinue Game");
     }
 
     public void ExitGame()
     {
         Application.Quit();
-        Debug.Log("Exit Game");
-    }
-
-
-
-    void Update()
-    {
-
     }
 }
