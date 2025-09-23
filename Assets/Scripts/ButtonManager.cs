@@ -1,42 +1,30 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-
-    public Button startButton;
-    public Button countinueButton;
-    public Button exitButton;
-
-    void Start()
+    public void StartGame()
     {
-        // Listener zuweisen
-        startButton.onClick.AddListener(StartGame);
-        continueButton.onClick.AddListener(ContinueGame);
-        exitButton.onClick.AddListener(ExitGame);
-
+        SceneManager.LoadScene("GameScene(einfügen)");
     }
-        public void StartGame() 
-        {
 
-            SceneManager.LoadScene("GameScene(einfügen)");
-        }
+    public void CountinueGame()
+    {
+        Time.timeScale = 1f;
+        Debug.Log("Countinue Game");
+    }
 
-        public void CountinueGame()
-        {
-            Time.timeScale = 1f;
-            Debug.Log("Countinue Game");
-        }
+    public void ExitGame()
+    {
+        Application.Quit();
+        Debug.Log("Exit Game");
+    }
 
-        public void ExitGame()
-        {
-            Application.Quit();
-            Debug.Log("Exit Game")´;
-        }
-    
 
-    
+
     void Update()
     {
-        
+
     }
 }
