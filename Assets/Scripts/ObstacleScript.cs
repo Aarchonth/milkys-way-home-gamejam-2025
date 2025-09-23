@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections; 
+using System.Collections;
 
 public class ObstacleScript : MonoBehaviour
 {
@@ -27,11 +27,10 @@ public class ObstacleScript : MonoBehaviour
                 HandleImpulseField(other);
                 break;
             default:
-                debug.log("No obstacle type selected"); 
+                Debug.LogError("No obstacle type selected");
+                break;
         }
     }
-
-    
 
     public void HandleStasisField(Collider playerCollider)
     {
@@ -64,12 +63,11 @@ public class ObstacleScript : MonoBehaviour
     {
         Rigidbody2D playerRB = playerCollider.GetComponent<Rigidbody2D>();
 
-            if (playerRB != null)
-            {
-                Vector2 impulseDirection = playerCollider.transform.position - this.transform.position;
-                Vector2 impulseForce = impulseDirection.normalized * ImpulseForce;
-                playerRB.AddForce(impulseForce, ForceMode2D.Impulse);
-                
+        if (playerRB != null)
+        {
+            Vector2 impulseDirection = playerCollider.transform.position - this.transform.position;
+            Vector2 impulseForce = impulseDirection.normalized * ImpulseForce;
+            playerRB.AddForce(impulseForce, ForceMode2D.Impulse);
 
             Debug.Log("Impulse applied to player.");
         }
