@@ -4,12 +4,14 @@ using System.Collections;
 public class ObstacleScript : MonoBehaviour
 {
     // Variables
-    public Obstacles ObstacleType;
+    public Obstacles ObstacleType = Obstacles.None;
     public float StasisDuration = 2f;
+    public float ImpulseForce = 10f;
 
     // Methods
-    enum Obstacles
+    public enum Obstacles
     {
+        None,
         StasisField,
         ImpulseField
     }
@@ -24,6 +26,8 @@ public class ObstacleScript : MonoBehaviour
             case Obstacles.ImpulseField:
                 HandleImpulseField(other);
                 break;
+            default:
+                debug.log("No obstacle type selected"); 
         }
     }
 
@@ -58,6 +62,16 @@ public class ObstacleScript : MonoBehaviour
 
     public void HandleImpulseField(Collider playerCollider)
     {
-        
+        Rigidbody2D playerRB = playerCollider.GetComponent<Rigidbody2D>();
+
+            if (playerRB != null)
+            {
+                Vector2 impulseDirection = playerCollider.transform.position - this.transform.position;
+                Vector2 impulseForce = impulseDirection.normalized * ImpulseForce;
+                playerRB.AddForce(impulseForce, ForceMode2D.Impulse);
+                
+
+            Debug.Log("Impulse applied to player.");
+        }
     }
 }
