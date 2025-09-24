@@ -11,7 +11,7 @@ public class AdvanceUI : MonoBehaviour
 
     public void MenuAdv(List<Advancement> adv)
     {
-        GameObject hold = Instantiate(advanceObj);
+        GameObject hold = GameObject.Find("AdvUI");
         RectTransform[] childs = hold.GetComponentsInChildren<RectTransform>();
         foreach (RectTransform child in childs)
         {
