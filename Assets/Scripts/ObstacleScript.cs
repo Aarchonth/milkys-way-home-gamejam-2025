@@ -4,9 +4,9 @@ using System.Collections;
 public class ObstacleScript : MonoBehaviour
 {
     // Variables
-    public Obstacles ObstacleType = Obstacles.None;
+    public Obstacles ObstacleType = Obstacles.ImpulseField;
     public float StasisDuration = 2f;
-    public float ImpulseForce = 10f;
+    public float ImpulseForce = 1000f;
 
     // Methods
     public enum Obstacles
@@ -16,29 +16,31 @@ public class ObstacleScript : MonoBehaviour
         ImpulseField
     }
 
-    void OnTriggerEnter(Collider other)
+    // Handles trigger events for the StasisField
+    void OnTriggerEnter2D(Collider2D other)
     {
-        switch (ObstacleType)
+        if (ObstacleType == Obstacles.StasisField)
         {
-            case Obstacles.StasisField:
-                HandleStasisField(other);
-                break;
-            case Obstacles.ImpulseField:
-                HandleImpulseField(other);
-                break;
-            default:
-                Debug.LogError("No obstacle type selected");
-                break;
+            HandleStasisField(other);
         }
     }
 
-    public void HandleStasisField(Collider playerCollider)
+    // Handles collision events for the ImpulseField
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (ObstacleType == Obstacles.ImpulseField)
+        {
+            HandleImpulseField(collision);
+        }
+    }
+
+    public void HandleStasisField(Collider2D playerCollider)
     {
         // start Coroutine
         StartCoroutine(StasisTimer(playerCollider, StasisDuration));
     }
 
-    IEnumerator StasisTimer(Collider playerCollider, float stasisDuration)
+    IEnumerator StasisTimer(Collider2D playerCollider, float stasisDuration)
     {
         // Take the PlayerMovement component from the player
         PlayerMovement playerMovement = playerCollider.GetComponent<PlayerMovement>();
@@ -59,15 +61,14 @@ public class ObstacleScript : MonoBehaviour
         }
     }
 
-    public void HandleImpulseField(Collider playerCollider)
+    public void HandleImpulseField(Collision2D collision)
     {
-        Rigidbody2D playerRB = playerCollider.GetComponent<Rigidbody2D>();
+        Rigidbody2D playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
 
         if (playerRB != null)
         {
-            Vector2 impulseDirection = playerCollider.transform.position - this.transform.position;
-            Vector2 impulseForce = impulseDirection.normalized * ImpulseForce;
-            playerRB.AddForce(impulseForce, ForceMode2D.Impulse);
+            Vector2 impulseDirection = playerRB.transform.position - transform.position;
+            playerRB.velocity = impulseDirection.normalized * ImpulseForce;
 
             Debug.Log("Impulse applied to player.");
         }
