@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aecb6b8b2896e24f9dc3f76c1dc32cc, type: 3}
   m_Name: Voyger 1
   m_EditorClassIdentifier: 
+  AdvanceIDEdit: 0
+  NameEdit: Voyger 1
+  DescriptionEdit: Test
+  AchievedEdit: 0
+  ImgEdit: {fileID: 21300000, guid: 364a4f07fd31da6478e487eaae9b0805, type: 3}
   AdvanceID: 0
-  Name: Voyger 1
-  Description: Test
+  Name: 
+  Description: 
   Achieved: 0
-  Img: {fileID: 21300000, guid: 364a4f07fd31da6478e487eaae9b0805, type: 3}
+  Img: {fileID: 0}

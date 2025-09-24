@@ -96,7 +96,6 @@ public class GameManager : MonoBehaviour
 
     public void NewAchieved(string name)
     {
-        Debug.Log("NewAchieved");
         AdvanceUI UI = GameObject.Find("AdvanceUI").GetComponent<AdvanceUI>();
         int index = advance.FindIndex(a => a.Name == name);
         UI.NewAdvancement(advance, index);
