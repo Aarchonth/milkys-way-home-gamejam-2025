@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class Counter : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     public Transform target;       // Das Objekt, das fällt
     public TMP_Text counterText;   // Dein TMP Text

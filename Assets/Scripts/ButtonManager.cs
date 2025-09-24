@@ -22,6 +22,7 @@ public class ButtonManager : MonoBehaviour
 
     public void ExitGame()
     {
+        GameManager.instance.SaveGame();
         Application.Quit();
     }
 }
