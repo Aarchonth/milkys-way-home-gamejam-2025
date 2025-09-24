@@ -14,20 +14,18 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit2D = Physics2D.Raycast(mousePos, Vector2.zero);
+            if (hit2D.collider != null)
             {
-                if (hit.collider != null)
+                GameObject gameObj = hit2D.collider.gameObject;
+                if (gameObj.tag == "Advancement")
                 {
-                    GameObject gameObj = hit.collider.gameObject;
-                    if (gameObj.tag == "Advancement")
+                    var advancement = GameManager.instance.advance.Find(x => x.Name == gameObj.name);
+                    if (advancement != null && advancement.Achieved != true)
                     {
-                        if (GameManager.instance.advance.Find(x => x.Name == gameObj.name).Achieved != true)
-                        {
-                            GameManager.instance.advance.Find(x => x.Name == gameObj.name).Achieved = true;
-                            GameManager.instance.NewAchieved(gameObj.name);
-                        }
+                        advancement.Achieved = true;
+                        GameManager.instance.NewAchieved(gameObj.name);
                     }
                 }
             }

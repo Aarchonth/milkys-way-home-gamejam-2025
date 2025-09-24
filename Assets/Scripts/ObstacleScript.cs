@@ -68,7 +68,7 @@ public class ObstacleScript : MonoBehaviour
         if (playerRB != null)
         {
             Vector2 impulseDirection = playerRB.transform.position - transform.position;
-            playerRB.velocity = impulseDirection.normalized * ImpulseForce;
+            playerRB.linearVelocity = impulseDirection.normalized * ImpulseForce;
 
             Debug.Log("Impulse applied to player.");
         }

@@ -24,6 +24,7 @@ public class AdvanceUI : MonoBehaviour
 
     public void NewAdvancement(List<Advancement> adv, int index)
     {
+        Debug.Log("Call");
         GameObject advObj = Instantiate(advanceObj);
         RectTransform[] childs = advObj.GetComponentsInChildren<RectTransform>();
         foreach (RectTransform child in childs)

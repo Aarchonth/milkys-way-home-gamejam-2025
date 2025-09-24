@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public List<Advancement> advance = new();
-    string path;
+    private string path;
 
     void Awake()
     {
@@ -39,6 +39,11 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("No Saves found");
         }
+        foreach (var item in advance)
+        {
+            item.Construct();
+        }
+
         if (state == LevelState.MainMenu)
         {
             AdvanceUI UI = GameObject.Find("AdvanceUI").GetComponent<AdvanceUI>();
@@ -91,6 +96,7 @@ public class GameManager : MonoBehaviour
 
     public void NewAchieved(string name)
     {
+        Debug.Log("NewAchieved");
         AdvanceUI UI = GameObject.Find("AdvanceUI").GetComponent<AdvanceUI>();
         int index = advance.FindIndex(a => a.Name == name);
         UI.NewAdvancement(advance, index);
