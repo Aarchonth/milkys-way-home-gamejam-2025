@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rbody;
+    private Animator anim;
     private float force = 1f;
     private float rotationSpeed = 550f;
     private float currentRotationInput = 0f;
@@ -11,18 +12,31 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
+        bool left = Input.GetKey(KeyCode.D);
+        bool right = Input.GetKey(KeyCode.A);
+        bool up = Input.GetKey(KeyCode.S);
+
+        anim.SetBool("isLeft", left);
+        anim.SetBool("isRight", right);
+        anim.SetBool("isUp", up);
+
         float targetRotationInput = 0f;
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
         {
             targetRotationInput = 1f;
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
         {
             targetRotationInput = -1f;
+        }
+        else if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.A))
+        {
+            targetRotationInput = 0f;
         }
 
         currentRotationInput = Mathf.Lerp(currentRotationInput, targetRotationInput, approachRotation * Time.deltaTime);
