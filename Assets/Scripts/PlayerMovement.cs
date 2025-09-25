@@ -4,6 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rbody;
     private Animator anim;
+    [HideInInspector]
+    public bool canMove = true;
 
     [Header("Movement Settings")]
     public float force = 5f;
@@ -20,8 +22,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        bool left = Input.GetKey(KeyCode.A);
+        if (!canMove) return;
+
         bool right = Input.GetKey(KeyCode.D);
+        bool left = Input.GetKey(KeyCode.A);
         bool up = Input.GetKey(KeyCode.S);
 
         anim.SetBool("isLeft", left);
@@ -29,8 +33,8 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("isUp", up);
 
         float targetRotationInput = 0f;
-        if (left && !right) targetRotationInput = 1f;
-        else if (right && !left) targetRotationInput = -1f;
+        if (!left && right) targetRotationInput = 1f;
+        else if (!right && left) targetRotationInput = -1f;
 
         currentRotationInput = Mathf.Lerp(
             currentRotationInput,

@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public List<Advancement> advance = new();
     private string path;
 
+    private GameObject lastObj;
+
     void Awake()
     {
         if (instance == null)
@@ -49,6 +51,16 @@ public class GameManager : MonoBehaviour
             AdvanceUI UI = GameObject.Find("AdvanceUI").GetComponent<AdvanceUI>();
             UI.MenuAdv(advance);
         }
+    }
+
+    public void SetLastPoint(Transform point, LevelManager lm)
+    {
+        lastObj = new GameObject("LastObj");
+        lastObj.transform.position = point.position;
+        lastObj.AddComponent<BoxCollider2D>().size = new Vector2(30, 1);
+        lastObj.GetComponent<BoxCollider2D>().isTrigger = true;
+        lastObj.AddComponent<NextLevelCollider>();
+        lastObj.GetComponent<NextLevelCollider>().levelManager = lm;
     }
 
     public void SaveGame()

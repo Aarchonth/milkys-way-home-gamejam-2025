@@ -4,7 +4,8 @@ using System.Collections;
 public class ObstacleScript : MonoBehaviour
 {
     // Variables
-    public Obstacles ObstacleType = Obstacles.ImpulseField;
+    public Obstacles ObstacleType = Obstacles.None;
+    public bool DestroyOnUse = true;
     public float StasisDuration = 2f;
     public float ImpulseForce = 1000f;
 
@@ -19,18 +20,26 @@ public class ObstacleScript : MonoBehaviour
     // Handles trigger events for the StasisField
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (ObstacleType == Obstacles.StasisField)
+        if (other.gameObject.CompareTag("Player"))
         {
-            HandleStasisField(other);
+            if (ObstacleType == Obstacles.StasisField)
+            {
+                HandleStasisField(other);
+            }
         }
     }
 
     // Handles collision events for the ImpulseField
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (ObstacleType == Obstacles.ImpulseField)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            HandleImpulseField(collision);
+            if (ObstacleType == Obstacles.ImpulseField)
+            {
+                HandleImpulseField(collision.gameObject);
+                if (DestroyOnUse)
+                    Destroy(gameObject);
+            }
         }
     }
 
@@ -42,13 +51,15 @@ public class ObstacleScript : MonoBehaviour
 
     IEnumerator StasisTimer(Collider2D playerCollider, float stasisDuration)
     {
+        gameObject.GetComponent<Collider2D>().enabled = false;
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
         // Take the PlayerMovement component from the player
         PlayerMovement playerMovement = playerCollider.GetComponent<PlayerMovement>();
 
         if (playerMovement != null)
         {
             // Deaktivate the script to freeze the player
-            playerMovement.enabled = false;
+            playerMovement.canMove = false;
         }
 
         // wait for the duration of the stasis
@@ -57,13 +68,20 @@ public class ObstacleScript : MonoBehaviour
         if (playerMovement != null)
         {
             // Aktivate the script to unfreeze the player
-            playerMovement.enabled = true;
+            playerMovement.canMove = true;
+        }
+        if (DestroyOnUse)
+            Destroy(gameObject);
+        else
+        {
+            gameObject.GetComponent<Collider2D>().enabled = true;
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
     }
 
-    public void HandleImpulseField(Collision2D collision)
+    public void HandleImpulseField(GameObject player)
     {
-        Rigidbody2D playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
+        Rigidbody2D playerRB = player.GetComponent<Rigidbody2D>();
 
         if (playerRB != null)
         {

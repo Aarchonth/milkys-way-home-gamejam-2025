@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jupiter_zu_Mars_0: 4021265565808663181
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

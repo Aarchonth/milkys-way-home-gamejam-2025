@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Venus_zu_Mercury_0: -1240978770073430200
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

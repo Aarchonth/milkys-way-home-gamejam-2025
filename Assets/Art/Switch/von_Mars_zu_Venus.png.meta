@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      von_Mars_zu_Venus_0: 1962900403073705420
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
