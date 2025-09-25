@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GameJam_Asset_Meteorit_1_0: -6061400575480257446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

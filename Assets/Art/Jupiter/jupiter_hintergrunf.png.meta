@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 510949568083d0c47ac4500befd56a84
+guid: 91b1c5ea132af8e41bef5790fc017bdd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3904042750503576577
-    second: GameJam_Venus_Border_0
-  - first:
-      213: 5354751452330150626
-    second: GameJam_Venus_Border_1
+      213: -3149049708724767653
+    second: jupiter_hintergrunf_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GameJam_Venus_Border_0
+      name: jupiter_hintergrunf_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 724
-        height: 4320
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ffb9b4c8dcd02d9c0800000000000000
-      internalID: -3904042750503576577
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GameJam_Venus_Border_1
-      rect:
-        serializedVersion: 2
-        x: 3020
-        y: 0
-        width: 820
-        height: 4320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ea45a04316ef4a40800000000000000
-      internalID: 5354751452330150626
+      spriteID: b54b96b69f35c44d0800000000000000
+      internalID: -3149049708724767653
       vertices: []
       indices: 
       edges: []
@@ -159,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      GameJam_Venus_Border_0: -3904042750503576577
-      GameJam_Venus_Border_1: 5354751452330150626
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

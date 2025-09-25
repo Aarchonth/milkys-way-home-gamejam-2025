@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GameJam_Venus_Background_0: 7761227302624020463
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
