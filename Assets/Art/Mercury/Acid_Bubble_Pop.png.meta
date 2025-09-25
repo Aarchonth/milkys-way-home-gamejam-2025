@@ -734,7 +734,32 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Acid_Bubble_Pop_0: 6190294238106014904
+      Acid_Bubble_Pop_1: -3702478059852051068
+      Acid_Bubble_Pop_10: -610635959633816660
+      Acid_Bubble_Pop_11: -5413397908777963806
+      Acid_Bubble_Pop_12: -2418843026541619178
+      Acid_Bubble_Pop_13: -1704336292610330070
+      Acid_Bubble_Pop_14: -5886856344472987032
+      Acid_Bubble_Pop_15: -6537867048648790499
+      Acid_Bubble_Pop_16: 4436923003331816237
+      Acid_Bubble_Pop_17: 7173442763680290921
+      Acid_Bubble_Pop_18: -1921477426238279770
+      Acid_Bubble_Pop_19: 4332863104569710429
+      Acid_Bubble_Pop_2: 613939899300585982
+      Acid_Bubble_Pop_20: -8399911736556084783
+      Acid_Bubble_Pop_21: -2716506144274734053
+      Acid_Bubble_Pop_22: 8494769729372979610
+      Acid_Bubble_Pop_23: 3410575148105388745
+      Acid_Bubble_Pop_24: -7110269538044714543
+      Acid_Bubble_Pop_3: 7106702967496743276
+      Acid_Bubble_Pop_4: 1771822604652302445
+      Acid_Bubble_Pop_5: 6879527662400787343
+      Acid_Bubble_Pop_6: 7243886037552241554
+      Acid_Bubble_Pop_7: -4597204239288263479
+      Acid_Bubble_Pop_8: 8081095179511641665
+      Acid_Bubble_Pop_9: -6445468943697788260
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

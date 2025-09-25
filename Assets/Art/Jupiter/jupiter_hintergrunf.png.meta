@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jupiter_hintergrunf_0: -3149049708724767653
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

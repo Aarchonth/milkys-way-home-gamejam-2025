@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mercury_Background_0: -3440709358310704316
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

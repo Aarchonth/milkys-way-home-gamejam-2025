@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jupiter_planet_0: 3068422925511391192
+      jupiter_planet_1: -8322645007222360351
+      jupiter_planet_2: -1789836858668954568
+      jupiter_planet_3: -5554799901535318088
+      jupiter_planet_4: 6427118512674160994
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
