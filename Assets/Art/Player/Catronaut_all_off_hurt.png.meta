@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Catronaut_all_off_hurt_0: 4341445665113779008
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

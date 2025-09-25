@@ -1,0 +1,742 @@
+fileFormatVersion: 2
+guid: 5417461bf7f62644da5fbbd52096145b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6190294238106014904
+    second: Acid_Bubble_Pop_0
+  - first:
+      213: -3702478059852051068
+    second: Acid_Bubble_Pop_1
+  - first:
+      213: 613939899300585982
+    second: Acid_Bubble_Pop_2
+  - first:
+      213: 7106702967496743276
+    second: Acid_Bubble_Pop_3
+  - first:
+      213: 1771822604652302445
+    second: Acid_Bubble_Pop_4
+  - first:
+      213: 6879527662400787343
+    second: Acid_Bubble_Pop_5
+  - first:
+      213: 7243886037552241554
+    second: Acid_Bubble_Pop_6
+  - first:
+      213: -4597204239288263479
+    second: Acid_Bubble_Pop_7
+  - first:
+      213: 8081095179511641665
+    second: Acid_Bubble_Pop_8
+  - first:
+      213: -6445468943697788260
+    second: Acid_Bubble_Pop_9
+  - first:
+      213: -610635959633816660
+    second: Acid_Bubble_Pop_10
+  - first:
+      213: -5413397908777963806
+    second: Acid_Bubble_Pop_11
+  - first:
+      213: -2418843026541619178
+    second: Acid_Bubble_Pop_12
+  - first:
+      213: -1704336292610330070
+    second: Acid_Bubble_Pop_13
+  - first:
+      213: -5886856344472987032
+    second: Acid_Bubble_Pop_14
+  - first:
+      213: -6537867048648790499
+    second: Acid_Bubble_Pop_15
+  - first:
+      213: 4436923003331816237
+    second: Acid_Bubble_Pop_16
+  - first:
+      213: 7173442763680290921
+    second: Acid_Bubble_Pop_17
+  - first:
+      213: -1921477426238279770
+    second: Acid_Bubble_Pop_18
+  - first:
+      213: 4332863104569710429
+    second: Acid_Bubble_Pop_19
+  - first:
+      213: -8399911736556084783
+    second: Acid_Bubble_Pop_20
+  - first:
+      213: -2716506144274734053
+    second: Acid_Bubble_Pop_21
+  - first:
+      213: 8494769729372979610
+    second: Acid_Bubble_Pop_22
+  - first:
+      213: 3410575148105388745
+    second: Acid_Bubble_Pop_23
+  - first:
+      213: -7110269538044714543
+    second: Acid_Bubble_Pop_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_0
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 696
+        width: 87
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4d47ddfc758e550800000000000000
+      internalID: 6190294238106014904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_1
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 717
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d47d532d72e9cc0800000000000000
+      internalID: -3702478059852051068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_2
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 743
+        width: 81
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef1204be517258800800000000000000
+      internalID: 613939899300585982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_3
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 617
+        width: 43
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c699bdd22b410a260800000000000000
+      internalID: 7106702967496743276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_4
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 745
+        width: 83
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d60de4b7547c69810800000000000000
+      internalID: 1771822604652302445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_5
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 701
+        width: 88
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f835fdba5fdf87f50800000000000000
+      internalID: 6879527662400787343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 614
+        width: 143
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b96bda8f3778460800000000000000
+      internalID: 7243886037552241554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_7
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 677
+        width: 81
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cc9d45f9137330c0800000000000000
+      internalID: -4597204239288263479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_8
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 601
+        width: 153
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 146b9e21041d52070800000000000000
+      internalID: 8081095179511641665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_9
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 616
+        width: 50
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c92c41035281d86a0800000000000000
+      internalID: -6445468943697788260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_10
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 601
+        width: 52
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca352fa74d59687f0800000000000000
+      internalID: -610635959633816660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_11
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 511
+        width: 279
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee627b884fbfd4b0800000000000000
+      internalID: -5413397908777963806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_12
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 472
+        width: 119
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6185e8b351b8e6ed0800000000000000
+      internalID: -2418843026541619178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_13
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 515
+        width: 292
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a22b72dfb2bf858e0800000000000000
+      internalID: -1704336292610330070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_14
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 362
+        width: 143
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86adee7385fad4ea0800000000000000
+      internalID: -5886856344472987032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_15
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 413
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1eae80fe84d445a0800000000000000
+      internalID: -6537867048648790499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_16
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 426
+        width: 48
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b2a55b6fd139d30800000000000000
+      internalID: 4436923003331816237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_17
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 379
+        width: 158
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96892c1ef203d8360800000000000000
+      internalID: 7173442763680290921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_18
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 293
+        width: 96
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6afa225167a8555e0800000000000000
+      internalID: -1921477426238279770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_19
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 256
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d571640890c612c30800000000000000
+      internalID: 4332863104569710429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_20
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 74
+        width: 49
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d1a0fdb7c48d6b80800000000000000
+      internalID: -8399911736556084783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_21
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 248
+        width: 97
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14a650fd080d4ad0800000000000000
+      internalID: -2716506144274734053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_22
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 299
+        width: 91
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a918408cf0c73e570800000000000000
+      internalID: 8494769729372979610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_23
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 131
+        width: 98
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c2d896f60cc45f20800000000000000
+      internalID: 3410575148105388745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acid_Bubble_Pop_24
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 131
+        width: 115
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d16097e68f335d90800000000000000
+      internalID: -7110269538044714543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
