@@ -4,10 +4,13 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rbody;
     private Animator anim;
-    private float force = 1f;
-    private float rotationSpeed = 550f;
+
+    [Header("Movement Settings")]
+    public float force = 5f;
+    public float rotationSpeed = 200f;
+    public float approachRotation = 5f;
+
     private float currentRotationInput = 0f;
-    private float approachRotation = 2f;
 
     void Start()
     {
@@ -17,8 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        bool left = Input.GetKey(KeyCode.D);
-        bool right = Input.GetKey(KeyCode.A);
+        bool left = Input.GetKey(KeyCode.A);
+        bool right = Input.GetKey(KeyCode.D);
         bool up = Input.GetKey(KeyCode.S);
 
         anim.SetBool("isLeft", left);
@@ -26,24 +29,22 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("isUp", up);
 
         float targetRotationInput = 0f;
-        if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
-        {
-            targetRotationInput = 1f;
-        }
-        else if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
-        {
-            targetRotationInput = -1f;
-        }
-        else if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.A))
-        {
-            targetRotationInput = 0f;
-        }
+        if (left && !right) targetRotationInput = 1f;
+        else if (right && !left) targetRotationInput = -1f;
 
-        currentRotationInput = Mathf.Lerp(currentRotationInput, targetRotationInput, approachRotation * Time.deltaTime);
+        currentRotationInput = Mathf.Lerp(
+            currentRotationInput,
+            targetRotationInput,
+            approachRotation * Time.deltaTime
+        );
+    }
 
+    void FixedUpdate()
+    {
         if (Mathf.Abs(currentRotationInput) > 0.01f)
         {
-            transform.Rotate(Vector3.forward * rotationSpeed * currentRotationInput * Time.deltaTime);
+            float rotation = rotationSpeed * currentRotationInput * Time.fixedDeltaTime;
+            rbody.MoveRotation(rbody.rotation + rotation);
         }
 
         if (Input.GetKey(KeyCode.S))

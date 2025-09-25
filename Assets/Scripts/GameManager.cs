@@ -120,5 +120,10 @@ public class GameManager : MonoBehaviour
     {
         None,
         MainMenu,
+        Jupiter,
+        Mars,
+        Venus,
+        Merkur,
+        Erde
     }
 }
