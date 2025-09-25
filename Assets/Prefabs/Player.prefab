@@ -115,7 +115,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -202,3 +202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51519028d25df084db228e9bf63b3821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force: 5
+  rotationSpeed: 200
+  approachRotation: 5
