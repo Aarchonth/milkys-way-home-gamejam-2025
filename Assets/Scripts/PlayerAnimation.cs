@@ -34,5 +34,4 @@ public class PlayerAnimation : MonoBehaviour
                 break;
         }
     }
-
 }
