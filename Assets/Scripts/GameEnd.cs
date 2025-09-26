@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameEnd : MonoBehaviour
 {
@@ -6,7 +8,13 @@ public class GameEnd : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
+            StartCoroutine(Credits());
         }
+    }
+
+    IEnumerator Credits()
+    {
+        yield return new WaitForSeconds(0f);
+        SceneManager.LoadScene("Credits");
     }
 }

@@ -65,7 +65,10 @@ public class GameManager : MonoBehaviour
 
     public void SaveGame()
     {
+        return;
+#pragma warning disable CS0162 // Unerreichbarer Code wurde entdeckt.
         List<AdvancementData> dataList = new();
+#pragma warning restore CS0162 // Unerreichbarer Code wurde entdeckt.
         foreach (var adv in advance)
         {
             dataList.Add(new AdvancementData

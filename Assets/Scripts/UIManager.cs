@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         // Differenz berechnen: wie weit nach unten bewegt
-        float distanceFallen = startHeight - target.position.y * -1;
+        float distanceFallen = startHeight - target.position.y;
 
         // Optional: nur positive Werte anzeigen
         if (distanceFallen < 0) distanceFallen = 0;

@@ -25,4 +25,11 @@ public class ButtonManager : MonoBehaviour
         GameManager.instance.SaveGame();
         Application.Quit();
     }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("MainGame");
+        GameManager.instance.SaveGame();
+        GameManager.instance.state = GameManager.LevelState.Jupiter;
+    }
 }

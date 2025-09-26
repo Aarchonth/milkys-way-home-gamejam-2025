@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathAnimation : MonoBehaviour
 {
@@ -8,9 +10,15 @@ public class DeathAnimation : MonoBehaviour
         {
             gameObject.GetComponentInParent<BlackHole>().isActive = false;
             Debug.Log("Player has died!");
-            // For example, you could trigger an animation or reload the scene
 
             collision.gameObject.GetComponent<Animator>().SetTrigger("Die");
+            StartCoroutine(GameOverScreen(0));
         }
+    }
+
+    IEnumerator GameOverScreen(int seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("GameOver");
     }
 }
