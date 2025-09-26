@@ -440,7 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ea262d4b4bce345b91c9c1bcd12467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObstacleType: 2
+  ObstacleType: 1
   DestroyOnUse: 0
   StasisDuration: 2
   ImpulseForce: 1000

@@ -67,7 +67,7 @@ public class ObstacleScript : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
         Transform player = GameObject.FindWithTag("Player").GetComponent<Transform>();
-        GameObject bub = Instantiate(bubbleScreen, new Vector3(0, 0, -5), Quaternion.identity, player);
+        GameObject bub = Instantiate(bubbleScreen, player.position + new Vector3(0, 0, -5), Quaternion.identity, player);
         yield return new WaitForSeconds(5f);
         Destroy(bub);
         if (DestroyOnUse)
