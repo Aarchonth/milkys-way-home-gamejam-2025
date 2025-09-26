@@ -10,7 +10,7 @@ public class LoadingScreen : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(Countdown(15, screeen1));
+        StartCoroutine(Countdown(5, screeen1));
     }
 
     IEnumerator Countdown(int time, GameObject obj)
@@ -21,7 +21,7 @@ public class LoadingScreen : MonoBehaviour
         {
             Destroy(obj);
             run = true;
-            StartCoroutine(Countdown(20, null));
+            StartCoroutine(Countdown(10, null));
         }
         else
         {

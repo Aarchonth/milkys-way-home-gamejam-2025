@@ -60,13 +60,14 @@ public class ObstacleScript : MonoBehaviour
     IEnumerator BubbleEffect()
     {
         anim.SetTrigger("Hit");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.15f);
         if (DestroyOnUse)
         {
             gameObject.GetComponent<Collider2D>().enabled = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
-        GameObject bub = Instantiate(bubbleScreen, Camera.current.transform.position + new Vector3(0, 0, -5), Quaternion.identity, Camera.current.transform);
+        Transform cam = GameObject.FindWithTag("MainCamera").GetComponent<Transform>();
+        GameObject bub = Instantiate(bubbleScreen, cam.position + new Vector3(0, 0, -5), Quaternion.identity, cam);
         yield return new WaitForSeconds(5f);
         Destroy(bub);
         if (DestroyOnUse)

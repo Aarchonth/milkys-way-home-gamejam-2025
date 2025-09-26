@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
             item.Construct();
         }
 
-        if (state == LevelState.MainMenu)
+        if (state == LevelState.MainMenu && false)
         {
             AdvanceUI UI = GameObject.Find("AdvanceUI").GetComponent<AdvanceUI>();
             UI.MenuAdv(advance);
