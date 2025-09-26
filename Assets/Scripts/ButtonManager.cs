@@ -5,7 +5,7 @@ public class ButtonManager : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("LoadingScreen");
+        SceneManager.LoadScene("LoadingSceen");
     }
 
     public void PauseGame()
