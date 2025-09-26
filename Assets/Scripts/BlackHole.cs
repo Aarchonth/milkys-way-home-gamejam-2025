@@ -18,7 +18,6 @@ public class BlackHole : MonoBehaviour
         transform.position += Vector3.down * Time.deltaTime * speed;
 
         float dir = transform.position.y - player.position.y;
-        Debug.Log(dir);
 
         if (dir > 30)
             speed += minSpeed;

@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 59112707}
   - component: {fileID: 59112706}
   - component: {fileID: 59112708}
+  - component: {fileID: 59112709}
   m_Layer: 0
   m_Name: schwarzes_loch
   m_TagString: Untagged
@@ -222,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4962144f484d14bb3b87fc18e9dafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityStrength: 20
+  gravityStrength: 10
 --- !u!58 &59112707
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -258,7 +259,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 8
+  m_Radius: 10.25
 --- !u!114 &59112708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +273,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
-  speed: 0.5
+--- !u!61 &59112709
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59112703}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20, y: 15}
+    newSize: {x: 20, y: 15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 25, y: 15}
+  m_EdgeRadius: 0
 --- !u!1 &234658480
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +329,9 @@ GameObject:
   m_Component:
   - component: {fileID: 234658481}
   - component: {fileID: 234658483}
+  - component: {fileID: 234658485}
   - component: {fileID: 234658482}
+  - component: {fileID: 234658484}
   m_Layer: 0
   m_Name: DeathPoint
   m_TagString: Untagged
@@ -353,7 +401,68 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 5
+  m_Radius: 4.5
+--- !u!114 &234658484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234658480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d104f92a7ca5f44586d653c3a71f94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancementID: 1
+  target: 0
+  targetPos: {x: 0, y: 0}
+--- !u!61 &234658485
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234658480}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 25, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &359808219
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +625,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df070340dc4dbfc4d880ecfc2467696b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  advanceObj: {fileID: 7337036117965175756, guid: a19f3a70c43c91448a00229ebd16f1f1, type: 3}
+  advanceObjPrefab: {fileID: 0}
+  MenuItem: {fileID: 0}
+  content: {fileID: 0}
 --- !u!4 &835074761
 Transform:
   m_ObjectHideFlags: 0
@@ -1002,6 +1113,8 @@ MonoBehaviour:
   state: 0
   advance:
   - {fileID: 11400000, guid: 834226ae046f88c4d84dc2cc25b2ef4a, type: 2}
+  Voyger: {fileID: 0}
+  Manhole: {fileID: 0}
 --- !u!4 &1642272667
 Transform:
   m_ObjectHideFlags: 0

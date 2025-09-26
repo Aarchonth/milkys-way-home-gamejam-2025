@@ -1,6 +1,6 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.IO;
 using UnityEngine;
 
@@ -14,6 +14,15 @@ public class GameManager : MonoBehaviour
     private string path;
 
     private GameObject lastObj;
+
+    public GameObject Voyger;
+    private bool voyger = false;
+    public GameObject Manhole;
+    private bool manhole = false;
+
+    private bool updatetAdvance = false;
+    [HideInInspector]
+    public AdvanceUI UI;
 
     void Awake()
     {
@@ -40,16 +49,36 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("No Saves found");
+            Debug.Log(path);
+            foreach (var item in advance)
+            {
+                item.BuildNew();
+            }
         }
-        foreach (var item in advance)
+        if (state == LevelState.MainMenu)
         {
-            item.Construct();
-        }
-
-        if (state == LevelState.MainMenu && false)
-        {
-            AdvanceUI UI = GameObject.Find("AdvanceUI").GetComponent<AdvanceUI>();
+            UI = GameObject.Find("AdvanceUI").GetComponent<AdvanceUI>();
             UI.MenuAdv(advance);
+            updatetAdvance = true;
+        }
+    }
+
+    void Update()
+    {
+        if (state == LevelState.MainMenu && !updatetAdvance)
+        {
+            UI.ShowChild();
+            UI.MenuAdv(advance);
+            updatetAdvance = true;
+        }
+        if (!updatetAdvance)
+        {
+            return;
+        }
+        if (state != LevelState.MainMenu)
+        {
+            UI.HideChild();
+            updatetAdvance = false;
         }
     }
 
@@ -61,6 +90,24 @@ public class GameManager : MonoBehaviour
         lastObj.GetComponent<BoxCollider2D>().isTrigger = true;
         lastObj.AddComponent<NextLevelCollider>();
         lastObj.GetComponent<NextLevelCollider>().levelManager = lm;
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Vector3 targetPos = player != null ? player.transform.position : point.position;
+
+        if (state == LevelState.Mars && !voyger)
+        {
+            GameObject prefab = Instantiate(Voyger, new Vector3(point.position.x + 5, point.position.y + 5, 0), Quaternion.identity);
+            voyger = true;
+            prefab.GetComponent<AdvancementTrigger>().targetPos = targetPos;
+            prefab.GetComponent<AdvancementTrigger>().target = true;
+        }
+        else if (state == LevelState.Merkur && !manhole)
+        {
+            GameObject prefab = Instantiate(Manhole, new Vector3(point.position.x + 5, point.position.y + 5, 0), Quaternion.identity);
+            manhole = true;
+            prefab.GetComponent<AdvancementTrigger>().targetPos = targetPos;
+            prefab.GetComponent<AdvancementTrigger>().target = true;
+        }
     }
 
     public void SaveGame()
@@ -109,10 +156,10 @@ public class GameManager : MonoBehaviour
         return result;
     }
 
-    public void NewAchieved(string name)
+    public void NewAchieved(int ID)
     {
         AdvanceUI UI = GameObject.Find("AdvanceUI").GetComponent<AdvanceUI>();
-        int index = advance.FindIndex(a => a.Name == name);
+        int index = advance.FindIndex(a => a.AdvanceID == ID);
         UI.NewAdvancement(advance, index);
     }
 

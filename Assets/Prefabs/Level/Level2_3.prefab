@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2348848084593220174}
   - component: {fileID: 5665151926371386514}
   - component: {fileID: 1100433697766094418}
+  - component: {fileID: 8734213472705438917}
   m_Layer: 0
   m_Name: Obstacle (Impulse) (Commet)
   m_TagString: Untagged
@@ -103,8 +104,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstacleType: 2
+  DestroyOnUse: 1
   StasisDuration: 100
   ImpulseForce: 4.5
+  bubbleScreen: {fileID: 0}
 --- !u!50 &5665151926371386514
 Rigidbody2D:
   serializedVersion: 5
@@ -169,6 +172,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.05}
   m_Size: {x: 2.45, y: 1.6}
   m_Direction: 1
+--- !u!114 &8734213472705438917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129099304911659787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d104f92a7ca5f44586d653c3a71f94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancementID: 3
 --- !u!1 &1199758630562063569
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +198,7 @@ GameObject:
   - component: {fileID: 6786774843287671120}
   - component: {fileID: 6144164801405328482}
   - component: {fileID: 5192069179962250665}
+  - component: {fileID: 2065199834042618927}
   m_Layer: 0
   m_Name: Obstacle (Impulse) (S Satelite)
   m_TagString: Untagged
@@ -272,8 +289,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstacleType: 2
+  DestroyOnUse: 1
   StasisDuration: 2
   ImpulseForce: 2
+  bubbleScreen: {fileID: 0}
 --- !u!58 &6144164801405328482
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -337,6 +356,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2065199834042618927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199758630562063569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d104f92a7ca5f44586d653c3a71f94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancementID: 3
 --- !u!1 &1852297222437882000
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +469,7 @@ GameObject:
   - component: {fileID: 8840824736785210839}
   - component: {fileID: 6506902791410517590}
   - component: {fileID: 7138922516617415332}
+  - component: {fileID: 4917453266320810383}
   m_Layer: 0
   m_Name: Obstacle (Impulse) (Commet) (1)
   m_TagString: Untagged
@@ -527,8 +560,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstacleType: 2
+  DestroyOnUse: 1
   StasisDuration: 100
   ImpulseForce: 4.5
+  bubbleScreen: {fileID: 0}
 --- !u!50 &6506902791410517590
 Rigidbody2D:
   serializedVersion: 5
@@ -593,6 +628,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.05}
   m_Size: {x: 2.45, y: 1.6}
   m_Direction: 1
+--- !u!114 &4917453266320810383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116552032537698289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d104f92a7ca5f44586d653c3a71f94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancementID: 3
 --- !u!1 &3508850475038484324
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +654,7 @@ GameObject:
   - component: {fileID: 7103729305462894374}
   - component: {fileID: 1277474122672159903}
   - component: {fileID: 8456312137107756615}
+  - component: {fileID: 8108902372193068998}
   m_Layer: 0
   m_Name: Obstacle (Impulse) (B Satelite)
   m_TagString: Untagged
@@ -696,8 +745,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstacleType: 2
+  DestroyOnUse: 1
   StasisDuration: 30
   ImpulseForce: 3
+  bubbleScreen: {fileID: 0}
 --- !u!50 &1277474122672159903
 Rigidbody2D:
   serializedVersion: 5
@@ -762,6 +813,19 @@ CapsuleCollider2D:
   m_Offset: {x: -0.05, y: -0.09}
   m_Size: {x: 1.15, y: 1.5}
   m_Direction: 0
+--- !u!114 &8108902372193068998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3508850475038484324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d104f92a7ca5f44586d653c3a71f94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancementID: 3
 --- !u!1 &4158541783207452142
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,6 +839,7 @@ GameObject:
   - component: {fileID: 867670854551294181}
   - component: {fileID: 1164124932730110898}
   - component: {fileID: 4138732493391281910}
+  - component: {fileID: 7645911582397055577}
   m_Layer: 0
   m_Name: Obstacle (Impulse) (Commet) (2)
   m_TagString: Untagged
@@ -865,8 +930,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstacleType: 2
+  DestroyOnUse: 1
   StasisDuration: 100
   ImpulseForce: 4.5
+  bubbleScreen: {fileID: 0}
 --- !u!50 &1164124932730110898
 Rigidbody2D:
   serializedVersion: 5
@@ -931,6 +998,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.05}
   m_Size: {x: 2.45, y: 1.6}
   m_Direction: 1
+--- !u!114 &7645911582397055577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158541783207452142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d104f92a7ca5f44586d653c3a71f94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancementID: 3
 --- !u!1 &5694369206678896757
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,6 +1055,7 @@ GameObject:
   - component: {fileID: 3222916235677243354}
   - component: {fileID: 4063671488418762604}
   - component: {fileID: 4835399538364734140}
+  - component: {fileID: 4231085357148202487}
   m_Layer: 0
   m_Name: Obstacle (Static) (Cirlce_Collider) (1)
   m_TagString: Untagged
@@ -1065,8 +1146,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstacleType: 1
+  DestroyOnUse: 1
   StasisDuration: 1
   ImpulseForce: 6.5
+  bubbleScreen: {fileID: 0}
 --- !u!58 &4063671488418762604
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1130,6 +1213,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4231085357148202487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5755255431480608444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d104f92a7ca5f44586d653c3a71f94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancementID: 3
 --- !u!1 &6322356979344139206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,6 +1270,7 @@ GameObject:
   - component: {fileID: 8847262825523038242}
   - component: {fileID: 8744910534445737935}
   - component: {fileID: 3054463338407853967}
+  - component: {fileID: 1634664499938686583}
   m_Layer: 0
   m_Name: Obstacle (Static) (Cirlce_Collider)
   m_TagString: Untagged
@@ -1264,8 +1361,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstacleType: 1
+  DestroyOnUse: 1
   StasisDuration: 1
   ImpulseForce: 6.5
+  bubbleScreen: {fileID: 0}
 --- !u!58 &8744910534445737935
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1329,6 +1428,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1634664499938686583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7385732130338291356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d104f92a7ca5f44586d653c3a71f94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancementID: 3
 --- !u!1 &7824372845581937926
 GameObject:
   m_ObjectHideFlags: 0
