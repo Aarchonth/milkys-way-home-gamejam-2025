@@ -299,6 +299,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 595615856226838858, guid: 7342e91a6f3cb4241a71dced72207d5e, type: 3}
+      propertyPath: DestroyOnUse
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5033525600479737545, guid: 7342e91a6f3cb4241a71dced72207d5e, type: 3}
       propertyPath: m_Name
       value: jupiter_rand

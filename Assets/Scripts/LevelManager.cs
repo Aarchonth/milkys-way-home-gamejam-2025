@@ -18,8 +18,6 @@ public class LevelManager : MonoBehaviour
     private int level = 0;
     private int suplevel = 0;
 
-    // 1h + 3h
-
     void Start()
     {
         levels.Add(l1);
@@ -106,7 +104,6 @@ public class LevelManager : MonoBehaviour
 
         if (currentLevel.Count > 5)
         {
-            Debug.Log("Lösche altes Level");
             Destroy(currentLevel[0]);
             currentLevel.RemoveAt(0);
         }

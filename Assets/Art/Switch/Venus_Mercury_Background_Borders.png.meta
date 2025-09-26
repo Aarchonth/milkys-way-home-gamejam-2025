@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 0c9d4faaf9bb9e044847aa69b2565dae
+guid: fb1e30c662f746a4aadaef1defb813e0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1240978770073430200
-    second: Venus_zu_Mercury_0
+      213: 7214507234388053438
+    second: Venus_Mercury_Background_Borders_0
+  - first:
+      213: 9131823108779786386
+    second: Venus_Mercury_Background_Borders_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +103,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Venus_zu_Mercury_0
+      name: Venus_Mercury_Background_Borders_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
+        width: 323
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 847d8f3326827cee0800000000000000
-      internalID: -1240978770073430200
+      spriteID: ebd8f270b141f1460800000000000000
+      internalID: 7214507234388053438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Venus_Mercury_Background_Borders_1
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 0
+        width: 524
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290c5862cb0cabe70800000000000000
+      internalID: 9131823108779786386
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Venus_zu_Mercury_0: -1240978770073430200
+      Venus_Mercury_Background_Borders_0: 7214507234388053438
+      Venus_Mercury_Background_Borders_1: 9131823108779786386
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

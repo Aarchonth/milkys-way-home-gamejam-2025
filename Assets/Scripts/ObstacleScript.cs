@@ -66,7 +66,8 @@ public class ObstacleScript : MonoBehaviour
             gameObject.GetComponent<Collider2D>().enabled = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
-        GameObject bub = Instantiate(bubbleScreen, new Vector3(0, 0, -5), Quaternion.identity);
+        Transform player = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        GameObject bub = Instantiate(bubbleScreen, new Vector3(0, 0, -5), Quaternion.identity, player);
         yield return new WaitForSeconds(5f);
         Destroy(bub);
         if (DestroyOnUse)
@@ -117,8 +118,6 @@ public class ObstacleScript : MonoBehaviour
         {
             Vector2 impulseDirection = playerRB.transform.position - transform.position;
             playerRB.linearVelocity = impulseDirection.normalized * ImpulseForce;
-
-            Debug.Log("Impulse applied to player.");
         }
     }
 }

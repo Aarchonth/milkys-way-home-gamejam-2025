@@ -175,8 +175,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstacleType: 2
+  DestroyOnUse: 1
   StasisDuration: 2
   ImpulseForce: 2
+  bubbleScreen: {fileID: 0}
 --- !u!50 &7331736040609134797
 Rigidbody2D:
   serializedVersion: 5
@@ -344,8 +346,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstacleType: 1
+  DestroyOnUse: 1
   StasisDuration: 3
   ImpulseForce: 3
+  bubbleScreen: {fileID: 0}
 --- !u!50 &2058447121675402671
 Rigidbody2D:
   serializedVersion: 5
@@ -513,8 +517,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstacleType: 2
+  DestroyOnUse: 1
   StasisDuration: 2
   ImpulseForce: 2.5
+  bubbleScreen: {fileID: 0}
 --- !u!50 &7283820557921298712
 Rigidbody2D:
   serializedVersion: 5
@@ -800,8 +806,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstacleType: 2
+  DestroyOnUse: 1
   StasisDuration: 2
   ImpulseForce: 2
+  bubbleScreen: {fileID: 0}
 --- !u!50 &2571330194059632234
 Rigidbody2D:
   serializedVersion: 5
@@ -912,6 +920,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 358965460370483546, guid: 7342e91a6f3cb4241a71dced72207d5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595615856226838858, guid: 7342e91a6f3cb4241a71dced72207d5e, type: 3}
+      propertyPath: DestroyOnUse
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5033525600479737545, guid: 7342e91a6f3cb4241a71dced72207d5e, type: 3}

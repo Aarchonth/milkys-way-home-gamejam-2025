@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0c9d4faaf9bb9e044847aa69b2565dae
+guid: 8d8e215e7a2c9424d97d4808dc3ae4ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1240978770073430200
-    second: Venus_zu_Mercury_0
+      213: 137799649250011561
+    second: Ubergang_Jupiter_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Venus_zu_Mercury_0
+      name: Ubergang_Jupiter_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 847d8f3326827cee0800000000000000
-      internalID: -1240978770073430200
+      spriteID: 9a968b70d0099e100800000000000000
+      internalID: 137799649250011561
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Venus_zu_Mercury_0: -1240978770073430200
+      Ubergang_Jupiter_0: 137799649250011561
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

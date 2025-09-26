@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0c9d4faaf9bb9e044847aa69b2565dae
+guid: 065e9db371c1f9d48b73356fc32a78b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1240978770073430200
-    second: Venus_zu_Mercury_0
+      213: 1111491168878667352
+    second: Venus_Mercury_Background_Ubergang_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Venus_zu_Mercury_0
+      name: Venus_Mercury_Background_Ubergang_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 847d8f3326827cee0800000000000000
-      internalID: -1240978770073430200
+      spriteID: 8562ff3445fcc6f00800000000000000
+      internalID: 1111491168878667352
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Venus_zu_Mercury_0: -1240978770073430200
+      Venus_Mercury_Background_Ubergang_0: 1111491168878667352
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

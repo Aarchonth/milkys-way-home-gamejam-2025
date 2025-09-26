@@ -540,5 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstacleType: 2
+  DestroyOnUse: 0
   StasisDuration: 2
   ImpulseForce: 1000
+  bubbleScreen: {fileID: 0}
