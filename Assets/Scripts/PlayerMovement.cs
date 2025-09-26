@@ -9,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Movement Settings")]
     public float force = 5f;
-    public float rotationSpeed = 200f;
-    public float approachRotation = 5f;
+    public float rotationSpeed = 150f;
+    public float approachRotation = 4f;
 
     private float currentRotationInput = 0f;
 

@@ -7,7 +7,7 @@ public class ObstacleScript : MonoBehaviour
     public Obstacles ObstacleType = Obstacles.None;
     public bool DestroyOnUse = true;
     public float StasisDuration = 2f;
-    public float ImpulseForce = 1000f;
+    public float ImpulseForce = 850f;
     public GameObject bubbleScreen;
 
     private Animator anim;
