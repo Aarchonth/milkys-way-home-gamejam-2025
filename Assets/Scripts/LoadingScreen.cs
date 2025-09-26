@@ -10,7 +10,7 @@ public class LoadingScreen : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(Countdown(5, screeen1));
+        StartCoroutine(Countdown(10, screeen1));
     }
 
     IEnumerator Countdown(int time, GameObject obj)
