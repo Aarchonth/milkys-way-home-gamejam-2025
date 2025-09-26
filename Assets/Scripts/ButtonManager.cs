@@ -6,6 +6,7 @@ public class ButtonManager : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("LoadingSceen");
+        GameManager.instance.state = GameManager.LevelState.Jupiter;
     }
 
     public void PauseGame()
@@ -31,5 +32,11 @@ public class ButtonManager : MonoBehaviour
         SceneManager.LoadScene("MainGame");
         GameManager.instance.SaveGame();
         GameManager.instance.state = GameManager.LevelState.Jupiter;
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        GameManager.instance.state = GameManager.LevelState.MainMenu;
     }
 }
