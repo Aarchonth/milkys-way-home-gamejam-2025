@@ -25,7 +25,7 @@ public class LoadingScreen : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("MainGame");
         }
     }
 }

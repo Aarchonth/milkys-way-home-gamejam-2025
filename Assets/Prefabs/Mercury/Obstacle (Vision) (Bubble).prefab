@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2365107050213905065}
   - component: {fileID: 8885800030575617055}
   - component: {fileID: 5447657439982412948}
+  - component: {fileID: 5177739571946145016}
   m_Layer: 0
   m_Name: Obstacle (Vision) (Bubble)
   m_TagString: Untagged
@@ -102,9 +103,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ea262d4b4bce345b91c9c1bcd12467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObstacleType: 2
+  ObstacleType: 3
+  DestroyOnUse: 1
   StasisDuration: 2
   ImpulseForce: 2
+  bubbleScreen: {fileID: 2638906711875010770, guid: 18a3a45d4a0d42b4caad8b8d1d6ffd0f, type: 3}
 --- !u!58 &8885800030575617055
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -168,3 +171,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &5177739571946145016
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657966316204504977}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95afbdc307aab3848b1538f6d9a6dd26, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -8,13 +8,23 @@ public class ObstacleScript : MonoBehaviour
     public bool DestroyOnUse = true;
     public float StasisDuration = 2f;
     public float ImpulseForce = 1000f;
+    public GameObject bubbleScreen;
+
+    private Animator anim;
+
+    void Start()
+    {
+        try { anim = GetComponent<Animator>(); }
+        catch { anim = null; }
+    }
 
     // Methods
     public enum Obstacles
     {
         None,
         StasisField,
-        ImpulseField
+        ImpulseField,
+        Bubble
     }
 
     // Handles trigger events for the StasisField
@@ -40,7 +50,27 @@ public class ObstacleScript : MonoBehaviour
                 if (DestroyOnUse)
                     Destroy(gameObject);
             }
+            else if (ObstacleType == Obstacles.Bubble)
+            {
+                StartCoroutine(BubbleEffect());
+            }
         }
+    }
+
+    IEnumerator BubbleEffect()
+    {
+        anim.SetTrigger("Hit");
+        yield return new WaitForSeconds(1f);
+        if (DestroyOnUse)
+        {
+            gameObject.GetComponent<Collider2D>().enabled = false;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
+        GameObject bub = Instantiate(bubbleScreen, new Vector3(0, 0, -5), Quaternion.identity);
+        yield return new WaitForSeconds(5f);
+        Destroy(bub);
+        if (DestroyOnUse)
+            Destroy(gameObject);
     }
 
     public void HandleStasisField(Collider2D playerCollider)
@@ -51,8 +81,12 @@ public class ObstacleScript : MonoBehaviour
 
     IEnumerator StasisTimer(Collider2D playerCollider, float stasisDuration)
     {
-        gameObject.GetComponent<Collider2D>().enabled = false;
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        if (DestroyOnUse)
+        {
+            gameObject.GetComponent<Collider2D>().enabled = false;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
+
         // Take the PlayerMovement component from the player
         PlayerMovement playerMovement = playerCollider.GetComponent<PlayerMovement>();
 
@@ -70,13 +104,9 @@ public class ObstacleScript : MonoBehaviour
             // Aktivate the script to unfreeze the player
             playerMovement.canMove = true;
         }
+
         if (DestroyOnUse)
             Destroy(gameObject);
-        else
-        {
-            gameObject.GetComponent<Collider2D>().enabled = true;
-            gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        }
     }
 
     public void HandleImpulseField(GameObject player)
