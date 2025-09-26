@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ObstacleScript : MonoBehaviour
 {
@@ -66,10 +67,15 @@ public class ObstacleScript : MonoBehaviour
             gameObject.GetComponent<Collider2D>().enabled = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
-        Transform cam = GameObject.FindWithTag("MainCamera").GetComponent<Transform>();
-        GameObject bub = Instantiate(bubbleScreen, cam.position + new Vector3(0, 0, -5), Quaternion.identity, cam);
+        GameObject pic = GameObject.Find("Flash");
+        pic.GetComponent<Image>().sprite = bubbleScreen.GetComponent<SpriteRenderer>().sprite;
+        Image img = pic.GetComponent<Image>();
+        Color c = img.color;
+        c.a = 1;
+        img.color = c;
         yield return new WaitForSeconds(5f);
-        Destroy(bub);
+        c.a = 0;
+        img.color = c;
         if (DestroyOnUse)
             Destroy(gameObject);
     }
