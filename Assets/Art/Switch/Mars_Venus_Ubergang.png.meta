@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mars_Venus_Ubergang_0: -813871844261594615
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

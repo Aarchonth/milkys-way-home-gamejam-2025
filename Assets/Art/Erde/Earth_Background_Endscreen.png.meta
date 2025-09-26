@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Earth_Background_Endscreen_0: -3365596096666211867
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
