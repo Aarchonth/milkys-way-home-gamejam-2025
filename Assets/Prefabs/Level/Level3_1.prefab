@@ -272,6 +272,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   advancementID: 3
+  target: 0
+  targetPos: {x: 0, y: 0}
 --- !u!1 &1199185627994087151
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,6 +458,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   advancementID: 3
+  target: 0
+  targetPos: {x: 0, y: 0}
 --- !u!1 &1531491851529931598
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +731,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   advancementID: 3
+  target: 0
+  targetPos: {x: 0, y: 0}
 --- !u!1 &2254234948560770935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,6 +1036,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   advancementID: 3
+  target: 0
+  targetPos: {x: 0, y: 0}
 --- !u!1 &4221667553959701548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +1414,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   advancementID: 3
+  target: 0
+  targetPos: {x: 0, y: 0}
 --- !u!1 &5959251158723097146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,6 +1674,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   advancementID: 3
+  target: 0
+  targetPos: {x: 0, y: 0}
 --- !u!1 &6066588068628745098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,6 +1860,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   advancementID: 3
+  target: 0
+  targetPos: {x: 0, y: 0}
 --- !u!1 &6089097977037220270
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,6 +2181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   advancementID: 3
+  target: 0
+  targetPos: {x: 0, y: 0}
 --- !u!1 &8156712640122192566
 GameObject:
   m_ObjectHideFlags: 0

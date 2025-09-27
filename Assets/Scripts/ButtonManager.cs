@@ -39,4 +39,11 @@ public class ButtonManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         GameManager.instance.state = GameManager.LevelState.MainMenu;
     }
+
+    public void Endless()
+    {
+        GameManager.instance.endless = true;
+        SceneManager.LoadScene("LoadingSceen");
+        GameManager.instance.state = GameManager.LevelState.Jupiter;
+    }
 }

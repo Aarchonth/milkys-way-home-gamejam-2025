@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     private bool updatetAdvance = false;
     [HideInInspector]
     public AdvanceUI UI;
+    [HideInInspector]
+    public int highscore = 0, gameHighscore = 0, allTimeHighscore = 0;
+    [HideInInspector]
+    public bool endless = false;
 
     void Awake()
     {

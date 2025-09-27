@@ -43,7 +43,6 @@ public class AdvanceUI : MonoBehaviour
     public void ShowChild()
     {
         UIA.SetActive(true);
-        ButtonName.SetActive(true);
     }
 
     private void CreateMenuItem(Advancement item)
