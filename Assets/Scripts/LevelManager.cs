@@ -147,6 +147,10 @@ public class LevelManager : MonoBehaviour
                     level = 1;         // zurück zu l1
                     suplevel = -1;     // Switch als Nächstes
                     GameManager.instance.state = GameManager.LevelState.Jupiter;
+                    foreach (var lvl in levels)
+                    {
+                        lvl.Sort((a, b) => Random.Range(-1, 2));
+                    }
                 }
             }
         }
@@ -158,7 +162,7 @@ public class LevelManager : MonoBehaviour
             GameManager.instance.SetLastPoint(currentLevel[currentLevel.Count - 2].transform, this);
 
         // Älteste Level wieder entfernen
-        if (currentLevel.Count > 10)
+        if (currentLevel.Count > 20)
         {
             Destroy(currentLevel[0]);
             currentLevel.RemoveAt(0);

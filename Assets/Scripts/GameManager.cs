@@ -1,13 +1,11 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public LevelState state = LevelState.None;
-
     public static GameManager instance;
 
     public List<Advancement> advance = new();
@@ -44,6 +42,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         path = Path.Combine(Application.persistentDataPath, "advancements.json");
+        Debug.Log(path);
     }
 
     void Start()
@@ -54,6 +53,10 @@ public class GameManager : MonoBehaviour
             if (holder.Count != advance.Count)
             {
                 Debug.Log("Mismatch in advancement count, rebuilding advancements.");
+                foreach (var item in holder)
+                {
+                    Debug.Log(item);
+                }
             }
             else
             {
@@ -78,6 +81,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private List<string> nonSceens = new List<string> { "LoadingSceen", "GameOver", "Credits" };
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -85,13 +89,11 @@ public class GameManager : MonoBehaviour
             if (!audioSource.isPlaying)
                 audioSource.Play();
         }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            audioSource.Stop();
-        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (nonSceens.Contains(SceneManager.GetActiveScene().name))
+                return;
             pause = !pause;
             PauseMenuButtons pmb = GameObject.Find("PauseMenu").GetComponent<PauseMenuButtons>();
             if (pause)
@@ -182,19 +184,34 @@ public class GameManager : MonoBehaviour
         // Load persisted all-time highscore
         allTimeHighscore = wrapper.allTimeHighscore;
 
-        List<Advancement> result = new();
-        foreach (var data in wrapper.advancements)
+        // Map gespeicherte Daten per ID
+        var savedById = new Dictionary<int, AdvancementData>();
+        foreach (var a in wrapper.advancements)
         {
-            var adv = advance.Find(a => a.AdvanceID == data.AdvanceID);
-            if (adv != null)
+            // Bei doppelten IDs gewinnt der letzte Eintrag
+            savedById[a.AdvanceID] = a;
+        }
+
+        // In die bestehende Masterliste mergen
+        foreach (var adv in advance)
+        {
+            if (savedById.TryGetValue(adv.AdvanceID, out var data))
             {
-                adv.Name = data.Name;
-                adv.Description = data.Description;
+                // Übernehme nur Save-relevante Felder
                 adv.Achieved = data.Achieved;
-                result.Add(adv);
+
+                // Optional: Name/Description aus Save übernehmen
+                // adv.Name = data.Name;
+                // adv.Description = data.Description;
+            }
+            else
+            {
+                // Nicht im Save vorhanden -> belasse Defaults
             }
         }
-        return result;
+
+        // Immer die vollständige Liste zurückgeben
+        return new List<Advancement>(advance);
     }
 
     public void NewAchieved(int ID)

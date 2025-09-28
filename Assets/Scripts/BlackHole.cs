@@ -4,6 +4,7 @@ public class BlackHole : MonoBehaviour
 {
     public bool isActive = true;
     private float minSpeed = 2f;
+    private float maxSpeed = 10f;
     private float speed;
     private Transform player;
 
@@ -27,9 +28,22 @@ public class BlackHole : MonoBehaviour
             }
         }
 
-        if (dir > 100)
-            speed += minSpeed;
-        else if (dir < 50)
-            speed = minSpeed;
+        if (minSpeed > maxSpeed)
+            minSpeed = maxSpeed;
+
+        if (GameManager.instance.endless)
+        {
+            if (dir > 200)
+                speed += minSpeed;
+            else if (dir < 100)
+                speed = minSpeed;
+        }
+        else
+        {
+            if (dir > 100)
+                speed += minSpeed;
+            else if (dir < 50)
+                speed = minSpeed;
+        }
     }
 }

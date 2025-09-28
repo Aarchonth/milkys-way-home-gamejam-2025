@@ -9,7 +9,6 @@ public class PauseMenuButtons : MonoBehaviour
 
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
         menu.SetActive(false);
         pauseMenu.SetActive(false);
         settingsMenu.SetActive(false);
