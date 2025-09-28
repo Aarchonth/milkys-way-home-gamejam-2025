@@ -24,9 +24,13 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public AdvanceUI UI;
     [HideInInspector]
-    public int highscore = 0, gameHighscore = 0, allTimeHighscore = 0;
+    public int highscore = 0, allTimeHighscore = 0;
     [HideInInspector]
     public bool endless = false;
+
+    private bool pause = false;
+    private GameObject pauseMenu;
+    public AudioSource audioSource;
 
     void Awake()
     {
@@ -47,8 +51,15 @@ public class GameManager : MonoBehaviour
         List<Advancement> holder = LoadGame();
         if (holder != null)
         {
-            advance.Clear();
-            advance.AddRange(holder);
+            if (holder.Count != advance.Count)
+            {
+                Debug.Log("Mismatch in advancement count, rebuilding advancements.");
+            }
+            else
+            {
+                advance.Clear();
+                advance.AddRange(holder);
+            }
         }
         else
         {
@@ -69,6 +80,26 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (!audioSource.isPlaying)
+                audioSource.Play();
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            audioSource.Stop();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pause = !pause;
+            PauseMenuButtons pmb = GameObject.Find("PauseMenu").GetComponent<PauseMenuButtons>();
+            if (pause)
+                pmb.PauseGame();
+            else
+                pmb.ResumeGame();
+        }
+
         if (state == LevelState.MainMenu && !updatetAdvance)
         {
             UI.ShowChild();
@@ -116,10 +147,7 @@ public class GameManager : MonoBehaviour
 
     public void SaveGame()
     {
-        return;
-#pragma warning disable CS0162 // Unerreichbarer Code wurde entdeckt.
         List<AdvancementData> dataList = new();
-#pragma warning restore CS0162 // Unerreichbarer Code wurde entdeckt.
         foreach (var adv in advance)
         {
             dataList.Add(new AdvancementData
@@ -130,7 +158,13 @@ public class GameManager : MonoBehaviour
                 Achieved = adv.Achieved
             });
         }
-        AdvancementDataListWrapper wrapper = new() { advancements = dataList };
+
+        AdvancementDataListWrapper wrapper = new()
+        {
+            advancements = dataList,
+            allTimeHighscore = allTimeHighscore
+        };
+
         string json = JsonUtility.ToJson(wrapper, true);
         File.WriteAllText(path, json);
     }
@@ -141,12 +175,15 @@ public class GameManager : MonoBehaviour
             return null;
 
         string json = File.ReadAllText(path);
-        List<AdvancementData> loadedData = JsonUtility.FromJson<AdvancementDataListWrapper>(json)?.advancements;
-        if (loadedData == null)
+        var wrapper = JsonUtility.FromJson<AdvancementDataListWrapper>(json);
+        if (wrapper == null || wrapper.advancements == null)
             return null;
 
+        // Load persisted all-time highscore
+        allTimeHighscore = wrapper.allTimeHighscore;
+
         List<Advancement> result = new();
-        foreach (var data in loadedData)
+        foreach (var data in wrapper.advancements)
         {
             var adv = advance.Find(a => a.AdvanceID == data.AdvanceID);
             if (adv != null)
@@ -180,6 +217,7 @@ public class GameManager : MonoBehaviour
     private class AdvancementDataListWrapper
     {
         public List<AdvancementData> advancements;
+        public int allTimeHighscore;
     }
 
     public enum LevelState

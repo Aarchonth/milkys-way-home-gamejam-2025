@@ -158,7 +158,7 @@ public class LevelManager : MonoBehaviour
             GameManager.instance.SetLastPoint(currentLevel[currentLevel.Count - 2].transform, this);
 
         // Älteste Level wieder entfernen
-        if (currentLevel.Count > 5)
+        if (currentLevel.Count > 10)
         {
             Destroy(currentLevel[0]);
             currentLevel.RemoveAt(0);
@@ -283,7 +283,7 @@ public class LevelManager : MonoBehaviour
 
         GameManager.instance.SetLastPoint(currentLevel[currentLevel.Count - 2].transform, this);
 
-        if (currentLevel.Count > 5)
+        if (currentLevel.Count > 10)
         {
             Destroy(currentLevel[0]);
             currentLevel.RemoveAt(0);

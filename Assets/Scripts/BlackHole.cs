@@ -21,15 +21,15 @@ public class BlackHole : MonoBehaviour
         if (GameManager.instance.endless)
         {
             int score = GameObject.Find("UIManager").GetComponent<UIManager>().score;
-            if (score % 100 == 0 && score > 0)
+            if (score % 75 == 0 && score > 0)
             {
                 minSpeed += 0.5f;
             }
         }
 
-        if (dir > 30)
+        if (dir > 100)
             speed += minSpeed;
-        else if (dir < 20)
+        else if (dir < 50)
             speed = minSpeed;
     }
 }

@@ -15,7 +15,7 @@ public class HighScore : MonoBehaviour
             }
             else
             {
-                highscore.GetComponent<TMP_Text>().text = "New All Time Highscore! Old Highscore: " + GameManager.instance.allTimeHighscore.ToString();
+                highscore.GetComponent<TMP_Text>().text = "New All Time Highscore! Old Highscore: " + GameManager.instance.allTimeHighscore.ToString() + "\nNew Highscore: " + GameManager.instance.highscore.ToString();
                 GameManager.instance.allTimeHighscore = GameManager.instance.highscore;
             }
             highscore.SetActive(true);
