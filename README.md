@@ -32,7 +32,7 @@ The player controls a small astronaut with a jetpack, navigating through dangero
 ---
 
 ## 🛠️ Tech Stack
-- Unity (Version XX.X.X)  
+- Unity (6000.0.48f1)  
 - C# (gameplay scripts)  
 - ShaderLab / HLSL (visual effects)  
 - GitHub for version control  
@@ -58,7 +58,7 @@ The player controls a small astronaut with a jetpack, navigating through dangero
 
 ## ▶️ How to Run
 1. Clone the repository  
-2. Open with Unity (Version XX.X.X)  
+2. Open with Unity (6000.0.48f1)  
 3. Load `MainScene` and hit play  
 
 ---
