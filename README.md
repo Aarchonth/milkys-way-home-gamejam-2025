@@ -18,7 +18,7 @@ The player controls a small astronaut with a jetpack, navigating through dangero
 ## 🖼️ Screenshots
 
 ### Credits
-<img width="1920" height="1080" alt="Uberarbeitet_Credit_Text" src="https://github.com/user-attachments/assets/f35797d5-be87-4a35-b1e4-6b07a33a196f" />
+<img width="1920" height="1080" alt="Credit_Updated" src="https://github.com/user-attachments/assets/8deb6a4a-297b-4aa6-aba3-e5078fbb9f00" />
 
 ### Loading Screen
 <img width="1920" height="1080" alt="Loading_Screen_01" src="https://github.com/user-attachments/assets/cbcbc8a9-571b-456f-a658-21fe5592e7da" />
